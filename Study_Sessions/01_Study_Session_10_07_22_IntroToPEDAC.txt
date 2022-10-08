@@ -1,0 +1,53 @@
+# RB Intro to PEDAC
+
+=begin
+Problem Analysis:
+- Goal: understand what you're being asked to do
+- Read the problem description
+- Identify expected input and output
+- Establish rules/requirements/define the boundaries of the problem 
+- Ask clarifying questions
+- Take your time on this step!
+=end
+
+=begin
+Write a method that takes an array of consecutive letters as input and returns the missing letter.
+=end
+
+# Problem
+# Input: Array of strings, all strings will be the same case
+# Output: A string with one letter
+
+# Our method will receive an array of letters but will be missing one letter. Write an algorithm to find that missing letter.
+
+# Implict Rules
+# When we find the missing letter, we must change the case
+
+# Examples / Modelling
+# 'b', 'd' -> 'b', 'c', 'd'
+
+# Algorithm
+# Compare the input array to the alphabet and see what's missing
+
+# Create an alphabet
+  # Use the input array to generate alpha array specific to the input letters limits
+    # Extract first and last elements of input array and assign to variables
+      # Use them as boundaries for the alphabet array
+        # Create a range from the boundaries then convert to array
+
+# Compare the input array to the alphabet array
+  # Iterate through the alpha array and compare each element to the given array
+    # If the current element is not in the given array, return it in the opposite case
+
+def determine_missing_letter(arr)
+  alpha = (arr[0]..arr[-1]).to_a
+
+  alpha.each do |e|
+    return e.swapcase if !arr.include?(e)
+  end
+end
+
+p determine_missing_letter(['a','b','c','d','f']) == 'E' 
+p determine_missing_letter(['O','Q','R','S']) == 'p'
+p determine_missing_letter(["a","b","c","d","f"]) == "E"
+p determine_missing_letter(["O","Q","R","S"]) == "p"
