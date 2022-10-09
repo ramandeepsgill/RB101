@@ -1,4 +1,4 @@
-# A method that returns the sum of two integers
+# 01. A method that returns the sum of two integers
 
 - Ask the user to input the first integer.
 - Ask the user to input the second integer.
