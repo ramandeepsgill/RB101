@@ -175,7 +175,7 @@ SET array_2_index = 0
 
 SET iterator = 0
 
-WHILE iterator < number_of_Iterations
+WHILE iterator < number_of_iterations
   IF iterator is even
     new_array[iterator] = array_1[array_1_index]
     array_1_index = array_1_index + 1
