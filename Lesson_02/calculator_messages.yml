@@ -1,0 +1,19 @@
+# messages file
+
+welcome: "Welcome to the Calculator! Enter your name"
+valid_name: "Make sure to use a valid name."
+first_number: "What's the first number?"
+second_number: "What's the second number?"
+valid_number: "Hmm ... that does not look like a valid number"
+operation_message: "Must choose 1, 2, 3 or 4"
+another_calc: "Do you want to perform another calculation? (Y to calculate again)"
+thanks: "Thanks for using the calculator."
+  
+  
+  
+  
+  
+  
+  
+  
+  
