@@ -1,4 +1,18 @@
-(1..10)                 .tap { |x| p x }   # 1..10
- .to_a                  .tap { |x| p x }   # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
- .select {|x| x.even? } .tap { |x| p x }   # [2, 4, 6, 8, 10]
- .map {|x| x*x }        .tap { |x| p x }   # [4, 16, 36, 64, 100]
+def fix(value)
+  puts "The object id of value is #{value.object_id}"
+  #value.upcase!
+  value = value.upcase
+  value.concat('!')
+  puts "The object id of value post operations is #{value.object_id}"
+  value
+end
+s = 'hello'
+puts "The value of s before method call is #{s}"
+puts "The object id of s before method call is #{s.object_id}"
+
+t = fix(s)
+puts "The value of t is #{t}"
+puts "The object id of t is #{t.object_id}"
+
+puts "The value of s post method call is #{s}"
+puts "The object id of s post method call is #{s.object_id}"
