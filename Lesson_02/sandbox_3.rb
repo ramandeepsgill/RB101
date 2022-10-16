@@ -1,8 +1,23 @@
-require "pry"
-a = [0,0]
+arr = ["r", "rock", "p", "paper", "s", "scissors"]
 
-until a.include?(3)
-  p a
-  p a.each_index {a[0] += 1}
-  binding.pry
+str = ''
+
+i = 0
+
+while i < arr.length
+  
+  if i.even?
+    
+    str = str + arr[i] + ' for '
+    
+  else
+    
+    str = str + arr[i] + ', '
+    
+  end
+  
+  i = i + 1
+  
 end
+
+p str.delete_suffix(', ')
