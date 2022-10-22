@@ -1,0 +1,16 @@
+
+[1mFrom:[0m /home/ec2-user/environment/RB101/Lesson_03/03_prac_prob_med_1_q3.rb:10 Object#factors:
+
+     [1;34m3[0m: [32mdef[0m [1;34mfactors[0m(number)
+     [1;34m4[0m:   [1;34m# puts "The number for which you want to find factors for should be greater than 0" if number <= 0[0m
+     [1;34m5[0m:   divisor = number
+     [1;34m6[0m:   [1;34m# binding.pry[0m
+     [1;34m7[0m:   factors = []
+     [1;34m8[0m:   [32mbegin[0m
+     [1;34m9[0m:     factors << number / divisor [32mif[0m number % divisor == [1;34m0[0m
+ => [1;34m10[0m:     binding.pry
+    [1;34m11[0m:     divisor -= [1;34m1[0m
+    [1;34m12[0m:   [32mend[0m [32muntil[0m divisor == [1;34m0[0m
+    [1;34m13[0m:   factors
+    [1;34m14[0m: [32mend[0m
+

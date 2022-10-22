@@ -3,10 +3,11 @@
 # the match is over, and the winning player becomes the 
 # Grand Winner!
 # 
+# VALID_CHOICES = ['rock', 'paper', 'scissors']
 
 VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'spock']
 
-win_options = { 'lizard': ['paper', 'spock'],
+WIN_OPTIONS = { 'lizard': ['paper', 'spock'],
                   'paper': ['rock', 'spock'],
                   'rock': ['lizard', 'scissors'],
                   'scissors': ['lizard', 'paper'],
@@ -60,9 +61,9 @@ loop do
   end
   computer_choice = VALID_CHOICES.sample()
   Kernel.puts("You chose: #{choice}; Computer chose: #{computer_choice}")
-  display_results(choice, computer_choice, win_options)
-  player_wins = add_win(choice, computer_choice, player_wins, win_options)
-  computer_wins = add_win(computer_choice, choice, computer_wins, win_options)
+  display_results(choice, computer_choice, WIN_OPTIONS)
+  player_wins = add_win(choice, computer_choice, player_wins, WIN_OPTIONS)
+  computer_wins = add_win(computer_choice, choice, computer_wins, WIN_OPTIONS)
   prompt("your wins: #{player_wins}")
   prompt("computer wins: #{computer_wins}")
   if player_wins == 3

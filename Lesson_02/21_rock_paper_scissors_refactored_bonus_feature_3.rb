@@ -3,10 +3,7 @@
 # the match is over, and the winning player becomes the 
 # Grand Winner!
 # 
-
 VALID_CHOICES = ['rock', 'paper', 'scissors']
-
-
 
 def prompt(message)
   Kernel.puts("=> #{message}")
