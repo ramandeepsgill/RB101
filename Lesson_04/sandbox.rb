@@ -1,40 +1,13 @@
-def double_numbers(numbers)
-  doubled_numbers = []
-  counter = 0
-
-  loop do
-    break if counter == numbers.size
-
-    current_number = numbers[counter]
-    doubled_numbers << current_number * 2
-
-    counter += 1
+def star_method(stars)
+  for star in stars
+    star.downcase!
   end
-
-  doubled_numbers
 end
 
-def double_numbers!(numbers)
-  
-  counter = 0
-  
-  loop do
-    break if counter == numbers.size
-    
-    numbers[counter] = numbers[counter] * 2
-    
-    counter += 1
-  end
-  
-  numbers
-end
+stars_1 = ['Sirius', 'Rigel', 'Vega', 'Polaris', 'Altair']
+stars_2 = star_method(stars_1)
 
-my_numbers = [1, 4, 3, 7, 2, 6]
+p stars_1
 
-p double_numbers(my_numbers) # => [2, 8, 6, 14, 4, 12]
+p stars_2
 
-p my_numbers
-
-p double_numbers!(my_numbers)
-
-p my_numbers
