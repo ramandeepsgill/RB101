@@ -1,18 +1,9 @@
-arr1 = ["a", "b", "c"]
+# hash = {e: [8], f: [6, 10], g: [1, 3]}
 
-puts "arr1 is #{arr1}"
+hash = {b: [2, 4, 6], c: [3, 6], d: [4]}
 
-arr2 = arr1.dup
-
-puts "arr2 is #{arr2}"
-
-arr2.map! do |char|
-  char.upcase
+value = hash.all? do |key, value|
+    value.all? { |el| el.even? }
 end
 
-arr1 # => ["a", "b", "c"]
-arr2 # => ["A", "B", "C"]
-
-puts "After map! method arr1 is #{arr1}"
-
-puts "After map! mthod arr2 is #{arr2}"
+p value

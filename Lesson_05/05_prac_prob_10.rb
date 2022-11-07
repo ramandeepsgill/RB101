@@ -10,32 +10,27 @@ Output: [{a: 2}, {b: 3, c: 4}, {d: 5, e: 6, f: 7}]
 
 Algorithm
 
+- Use the map method on the input array
+- In the block (outer level) following the map method pass the hashes as the argument
+  - initialize an empty hash
+  - use each method on the hashes passed as argument above
+  - In the block (inner level) code following each method, use the (key, value) pair to add to the new hash
+- 
+
 
 
 =end
 
-# array = [{a: 1}, {b: 2, c: 3}, {d: 4, e: 5, f: 6}]
+arr = [{a: 1}, {b: 2, c: 3}, {d: 4, e: 5, f: 6}]
 
-# array.map do |hsh|
-#   # incremented_hash = {}
-#   hsh.each do |key, value|
-#     hsh[key] = value + 1
-#   end
-#   # incremented_hash
-# end
-# # => [{:a=>2}, {:b=>3, :c=>4}, {:d=>5, :e=>6, :f=>7}]
+incr_hash = {}
 
-# p array
-
-array = [{a: 1}, {b: 2, c: 3}, {d: 4, e: 5, f: 6}]
-
-array.map do |hsh|
-  # incremented_hash = {}
-  hsh.map do |key, value|
-    value = value + 1
+arr2 = arr.map do |hash|
+    incr_hash = {}
+    hash.each do |key, value|
+    incr_hash[key] = value + 1
   end
-  # incremented_hash
+  incr_hash
 end
-# => [{:a=>2}, {:b=>3, :c=>4}, {:d=>5, :e=>6, :f=>7}]
 
-p array
+p arr2
